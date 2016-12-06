@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Contacts</title>
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi"
+    crossorigin="anonymous">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/favicon-contacts.ico">
+  <!-- Meta -->
+  <meta charset="UTF-8">
+  <meta name="description" content="hackajob.co | Javascript Front End | HTML/CSS challenge | 60 minutes & 48h hours">
+  <meta name="keywords" content="hackajob.co,Javascript,Front End,HTML,CSS">
+  <meta name="author" content="LeoTM">
+</head>
+
+<body>
+  <div class="container">
+    <!-- Search -->
+    <div class="row mb-1">
+      <div class="col-sm-6">
+        <div class="input-group">
+          <input type="text" class="form-control" id="searchContactTextInput" onkeyup="handlers.searchContacts()" aria-describedby="search-icon-addon">
+          <span class="input-group-addon" id="search-icon-addon">🔍</span>
+        </div>
+      </div>
+    </div>
+    <!-- Contacts -->
+    <h4 class="mb-1">Contacts</h4>
+    <ul class="pl-1">
+    </ul>
+    <!-- Sorts -->
+    <div>
+      <p style="float: left; transform: translateY(25%)" class="mr-1">Sort by:</p>
+      <div>
+        <button onclick="handlers.sortContactsByName()" class="btn btn-primary">Name</button>
+        <button onclick="handlers.sortContactsByPhoneNumber()" class="btn btn-primary">Number</button>
+        <button onclick="handlers.sortContactsByAddress()" class="btn btn-primary">Address</button>
+      </div>
+    </div><br>
+    <!-- Edit -->
+    <div class="mb-1">
+      <h2>Edit</h2>
+      <div class="row mb-1">
+        <div class="col-sm-6 py-1">
+          <input type="text" class="form-control" id="editContactNameTextInput" type="text">
+        </div>
+        <div class="col-sm-6 py-1">
+          <input type="text" class="form-control" id="editContactPhoneNumberTextInput" type="text">
+        </div>
+        <div class="col-sm-6 py-1">
+          <input type="text" class="form-control" id="editContactAddressTextInput" type="text">
+        </div>
+        <div class="col-sm-6 py-1">
+          <button onclick="handlers.editContact(this.parentElement.parentElement.id)" class="btn btn-info">Update</button>
+        </div>
+      </div>
+    </div>
+    <!-- New Contact -->
+    <div>
+      <h2>New Contact</h2>
+      <div class="row mb-1">
+        <div class="col-sm-6 py-1">
+          <input type="text" class="form-control" id="addContactNameTextInput" type="text" placeholder="Name">
+        </div>
+        <div class="col-sm-6 py-1">
+          <input type="text" class="form-control" id="addContactPhoneNumberTextInput" type="text" placeholder="Phone">
+        </div>
+        <div class="col-sm-6 py-1">
+          <input type="text" class="form-control" id="addContactAddressTextInput" type="text" placeholder="Address">
+        </div>
+        <div class="col-sm-6 py-1">
+          <button onclick="handlers.addContact()" class="btn btn-success">Add</button>
+        </div>
+      </div>
+    </div><br>
+  </div>
+</body>
+<script src="js/script.js"></script>
+
+</html>

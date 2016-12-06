@@ -1,0 +1,32 @@
+body {
+    margin-top: 32px;
+}
+
+
+/* Revert user agent link styles */
+
+a:-webkit-any-link {
+    color: initial;
+    text-decoration: initial;
+}
+
+
+/* Results */
+
+li {
+    margin-top: 8px;
+    list-style: none;
+}
+
+span.contact {
+    font-weight: 500;
+}
+
+
+/* Delete buttons */
+
+button.btn.btn-danger {
+    margin-left: 5px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
